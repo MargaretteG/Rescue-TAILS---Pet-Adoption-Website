@@ -1,0 +1,310 @@
+body {
+    font-family: "Poppins", sans-serif; 
+    background-color: #fffbe6;
+    color: #33372c;
+    overflow-x: hidden;
+}
+.overflow-hidden{
+    overflow: hidden;
+}
+
+.navbar-brand, .navbar img {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link-active{
+    color:#6256ca;
+}
+/* HEADER FOR EVERY PAGE */
+.cardHeader {
+    background-image: url('images/meet-the-pets-header.jpg') !important; 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: white; 
+    height: 300px; 
+    position: relative; 
+}
+
+.cardHeader .card-body {
+    position: relative; /* Keeps the card content over the image */
+    z-index: 2; 
+}
+
+
+
+.brand {
+    font-weight: bolder;
+    font-size: 25px;
+    line-height: .9;
+    color: #33372c;
+}
+
+.signupbtn {
+    width: 120px;
+}
+
+.welcomeSection{
+    margin-top: -30px;
+}
+.lead .strong{
+    font-size: 1rem;
+}
+/* Buttons */
+.btnCustom {
+    color: white;
+    background-color: #6256ca;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    padding: 14px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+}
+.btnFilter{
+    background-color: #7f7ca1;
+    transition: none;
+    
+}
+.btnFilter:hover{
+    transform: none;
+}
+
+
+.donatebtn {
+    background-color: transparent;
+    border: 2px solid #6256ca;
+    color: #6256ca;
+    padding: 11px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    position: relative;
+}
+
+.btnAnimals {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 11px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+/* Hover effect for all buttons */
+.btn-outline-dark {
+    background-color: white;
+}
+.btn-outline-secondary{
+    border: 2px solid #6256ca;
+    color: #6256ca;
+}
+.btn-outline-secondary:hover{
+    border: 2px solid #908ac7;
+    background-color: #908ac7;
+}
+
+
+.donatebtn:hover {
+    transform: translateY(-10px); 
+    border: 2px solid transparent;
+    background-color: #6256ca;
+    color: white;
+}
+
+.btnCustom:hover {
+    background-color: #44288b;
+    transform: translateY(-10px); 
+}
+
+.btnAnimals:hover {
+    background-color: white;
+    color: #00712d; /* Optional: You can change text color to match the background */
+    transform: translateY(-10px); /* Add a slight upward movement */
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.btnAnimalsD:hover {
+    color: #f9622a;
+}
+
+
+
+.logo {
+    width: 15vw; 
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+
+
+/* For the Pets image */
+
+.pets {
+    
+    position: absolute;
+    transform: translateY(-25%);
+    z-index: -1;
+}
+
+.cat {
+    width: 800px;
+    right: 200px;
+    top: 50px;
+}
+
+.dog {
+    width: 800px;
+    right: -150px;
+    top: -40px;
+    z-index: -2;
+}
+/* Default large size for bigger screens */
+.title-heading {
+    font-size: 6rem; /* Adjust this as your base size for larger screens */
+    color: #f9622a;
+    white-space: nowrap;
+}
+/* Subheading adjustments for responsiveness */
+.subheading {
+    margin-top: -10px;
+    font-size: 25px; /* Base size for larger screens */
+    color: #f9622a;
+}
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    .title-heading {
+        font-size: 5rem; /* Adjust based on screen size */
+    }
+}
+@media (max-width: 1024px) {
+    .cat, .dog {
+        width: 600px; /* Reduce size on smaller screens */
+    }
+    .cat {
+        right: 100px;
+        top: 30px;
+    }
+    .dog {
+        right: -100px;
+        top: -20px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .cat, .dog {
+        width: 400px; /* Further reduce size for tablet screens */
+    }
+    .cat {
+        right: 50px;
+        top: 20px;
+    }
+    .dog {
+        right: -80px;
+        top: -10px;
+    }
+    .title-heading {
+        font-size: 4rem; /* Adjust based on screen size */
+    }
+    .subheading {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .welcomeLogo{
+        display: none;
+    }
+    .cat, .dog {
+        display: none;
+        width: 250px; /* Smallest size for mobile screens */
+    }
+    .cat {
+        right: 20px;
+        top: 10px;
+    }
+    .dog {
+        right: -50px;
+        top: 0;
+    }
+    .subheading {
+        font-size: 18px;
+    }
+}
+
+/* OUR ANIMALS SECTION */
+
+.cardImg {
+    position: relative;
+    overflow: hidden;
+    
+  }
+  .cardDonate{
+    background: url('images/pet-adoption.jpg') no-repeat center;
+    background-size: cover; 
+  }
+  .cardAdopt{
+    background: url('images/pet-adoption2.jpg') no-repeat center;
+    background-size: cover; 
+    
+  }
+  
+  .cardImg::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+  }
+  .cardDonate::before{
+    background: rgba(249, 98, 42, 0.8); 
+  }
+  .cardAdopt::before{
+    background: rgb(0, 113, 45, 0.8);
+  } 
+  .cardImg .row {
+    position: relative; 
+    z-index: 2; 
+  }
+  /* ANIMALS FILTERING */
+  .animal-card {
+    display: none; 
+    width: 300px;
+}
+
+.animal-card.visible {
+    display: block; 
+}
+
+.animal-link {
+    display: block; 
+    height: 300px; 
+    text-decoration: none; 
+    color: inherit; 
+}
+.card-link .card {
+    transition: transform 0.3s ease;
+}
+.card-link:hover .card {
+    transform: scale(1.03); /* Slightly zoom the entire card */
+}
+
+.card-img-hover {
+    transition: transform 0.3s ease; 
+}
+
+.card-link:hover .card-img-hover {
+    transform: scale(1.1); /* Zoom the image */
+}
+
+.card-img-top { 
+    height: 300px; /* Set a fixed height for the image */
+    object-fit: cover; /* Cover the area without stretching */
+}
+
+.card-body {
+    text-align: center; 
+}
+/* HEADER FOR EACH PAGE*/
+
